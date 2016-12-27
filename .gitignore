@@ -13,6 +13,7 @@
 *.class
 
 # gradle files
+gradle/
 build.gradle
 gradle.properties
 gradlew

@@ -3,5 +3,5 @@
     <ImageView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:src="@drawable/chibi.jpg"/>
+        android:src="@drawable/chibi"/>
 </selector>

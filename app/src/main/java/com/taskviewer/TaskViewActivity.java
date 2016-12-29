@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import com.taskviewer.database.TaskTableHelper;
+import com.taskviewer.task.Task;
+
+import java.util.ArrayList;
 
 public class TaskViewActivity extends AppCompatActivity {
 
@@ -14,7 +17,18 @@ public class TaskViewActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_task_view);
 	}
 
-	public void onButtonClick(View view) {
-		TaskTableHelper t = new TaskTableHelper(this);
+	public void onCreateDataClick(View view) {
+		TaskTableHelper taskTable = new TaskTableHelper(this);
+		taskTable.insertNewTask(new Task("test", 0, null, 0, 0));
+		System.out.println("Clicked create data button");
+	}
+
+	public void onShowDataClick(View view) {
+		TaskTableHelper taskTable = new TaskTableHelper(this);
+		ArrayList<Task> taskList = taskTable.getAllTasks();
+
+		for (Task task : taskList) {
+			System.out.println("Got task: " + task);
+		}
 	}
 }

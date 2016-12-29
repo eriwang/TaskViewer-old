@@ -28,4 +28,9 @@ public class Task {
 		values.put(TaskStrings.COL_NAME_COLOR, color);
 		return values;
 	}
+
+	@Override
+	public String toString() {
+		return title;
+	}
 }

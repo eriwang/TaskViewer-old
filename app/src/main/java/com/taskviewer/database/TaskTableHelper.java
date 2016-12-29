@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.taskviewer.task.Task;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class TaskTableHelper extends SQLiteOpenHelper {
 	public static final int DATABASE_VERSION = 1;

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_favorite"
-        android:icon="@drawable/ic_favorite_black_48dp"
+        android:icon="@drawable/chibi"
         android:title="@string/app_name"
         app:showAsAction="ifRoom"/>
 

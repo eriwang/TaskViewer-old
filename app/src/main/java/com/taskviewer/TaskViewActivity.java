@@ -3,10 +3,16 @@ package com.taskviewer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import com.taskviewer.database.TaskTableHelper;
+import com.taskviewer.task.Task;
 
-public class TaskView extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class TaskViewActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

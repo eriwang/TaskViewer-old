@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<TableLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical"
 		tools:context="com.taskviewer.TaskFragment">
-	<EditText
-		android:layout_width="wrap_content"
+	<TableRow
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		>
+		<EditText
+		android:layout_width="300dp"
 		android:layout_height="wrap_content"
 		android:hint="Title"
 		android:inputType="text"
-		android:textSize="12dp"/>
-	<EditText
+		android:textSize="18dp"/>
+		<SurfaceView
+			android:background="#CBA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="right"
+			android:layout_weight="1"/>
+	</TableRow>
+	<TableRow>
+		<EditText
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:hint="Time"
 		android:inputType="time|date"
-		android:textSize="8dp"/>
-	<EditText
+		android:textSize="10dp"
+            android:layout_gravity="left"/>
+		<SurfaceView
+			android:background="#CBA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="right"
+			android:layout_weight="1"/>
+	</TableRow>
+	<TableRow>
+		<EditText
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:hint="Description"
 		android:inputType="text"
-		android:textSize="8dp"/>
-	<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="@string/hello_blank_fragment"/>
+		android:textSize="12dp"/>
 
-</LinearLayout>
+		<SurfaceView
+			android:background="#CBA"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_gravity="right"
+			android:layout_weight="1"/>
+	</TableRow>
+
+</TableLayout>

@@ -45,6 +45,10 @@ public class TaskTableHelper extends SQLiteOpenHelper {
 	}
 
 	// TODO: only get some tasks at a time (i.e. WHERE clause)
+	/*
+		Can sort by time, color group, priority, name
+		Default sort by time -> priority ->  name -> color group
+	*/
 	public ArrayList<Task> getAllTasks() {
 		SQLiteDatabase db = getReadableDatabase();
 		Cursor cursor = db.query(TaskStrings.TABLE_NAME, null, null, null, null, null, null);

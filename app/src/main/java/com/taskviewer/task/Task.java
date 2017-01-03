@@ -13,11 +13,11 @@ public class Task {
 		color = _color;
 	}
 
-	private String title;
-	private int time;
-	private String desc;
-	private int priority;
-	private int color;
+	public String title;
+	public int time;
+	public String desc;
+	public int priority;
+	public int color;
 
 	public ContentValues getTaskContentValues() {
 		ContentValues values = new ContentValues();

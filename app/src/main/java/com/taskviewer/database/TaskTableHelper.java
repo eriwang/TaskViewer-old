@@ -42,9 +42,17 @@ public class TaskTableHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
-	public void insertNewTask(Task task) {
+	public void insertTask(Task task) {
 		SQLiteDatabase db = getWritableDatabase();
 		db.insert(TaskStrings.TABLE_NAME, null, task.getTaskContentValues());
+	}
+
+	public void updateTask(Task task) {
+
+	}
+
+	public void removeTask(Task task) {
+
 	}
 
 	// TODO: only get some tasks at a time (i.e. WHERE clause)

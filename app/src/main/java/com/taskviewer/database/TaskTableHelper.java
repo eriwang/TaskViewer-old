@@ -5,8 +5,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.taskviewer.task.Task;
+import com.taskviewer.task.TaskComparator;
+import com.taskviewer.task.TaskSortCriterion;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TaskTableHelper extends SQLiteOpenHelper {
 	public static final int DATABASE_VERSION = 1;
@@ -58,6 +61,8 @@ public class TaskTableHelper extends SQLiteOpenHelper {
 			taskList.add(getNextTaskFromCursor(cursor));
 		}
 		cursor.close();
+
+		Collections.sort(taskList, new TaskComparator(TaskSortCriterion.DEFAULT));
 
 		return taskList;
 	}
